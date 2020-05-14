@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>HTML5 Canvas</title>
+		<title>Draw Something</title>
 	</head>
 	<body>
 		<canvas id="draw" width="800" height="800"></canvas>
@@ -14,7 +14,7 @@
 			ctx.strokeStyle = "#Bada55";
 			ctx.lineJoin = "round";
 			ctx.lineCap = "round";
-			ctx.lineWidth = 100;
+			ctx.lineWidth = 18;
 
 			let isDrawing = false;
 			let lastX = 0;
@@ -33,17 +33,17 @@
 				[lastX, lastY] = [e.offsetX, e.offsetY];
 
 				hue++;
-				if (hue >= 360) {
-					hue = 0;
-				}
-				if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
-					direction = !direction;
-				}
-				if (direction) {
-					ctx.lineWidth++;
-				} else {
-					ctx.lineWidth--;
-				}
+				// if (hue >= 360) {
+				// 	hue = 0;
+				// }
+				// if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+				// 	direction = !direction;
+				// }
+				// if (direction) {
+				// 	ctx.lineWidth++;
+				// } else {
+				// 	ctx.lineWidth--;
+				// }
 			}
 
 			canvas.addEventListener("mousedown", (e) => {
